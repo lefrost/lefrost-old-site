@@ -36,24 +36,24 @@
 
 /* width */
 :global(::-webkit-scrollbar) {
-  width: 8px;
+  width: 5px;
 }
 
 /* Track */
 :global(::-webkit-scrollbar-track) {
   // background: #f1f1f1;
-  background: $black;
+  background: transparent;
 }
 
 /* Handle */
 :global(::-webkit-scrollbar-thumb) {
-  background: $white;
-  border-radius: 0.5em;
+  background: $black;
+  // border-radius: 0.5em;
 }
 
 /* Handle on hover */
 :global(::-webkit-scrollbar-thumb:hover) {
-  background: rgba($white, 0.9);
+  background: rgba($black, 0.9);
 }
 
 /* --- Container --- */

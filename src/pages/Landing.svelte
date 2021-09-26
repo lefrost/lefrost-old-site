@@ -14,10 +14,8 @@
   </div>
 
   <!-- 2 -->
-  <div class="container  grow--">
-    <div
-      class="container  row-centre--  col-lg--  col-centre--  grow--  stretch--  landing-mid"
-    >
+  <div class="container  grow--  stretch--  row-centre--">
+    <div class="container  col--  col-centre--  grow--  stretch--  landing-mid">
       <div class="landing-mid__overlay  top--" />
       <div class="landing-mid__overlay  bottom--" />
       <div class="landing-mid__section">
@@ -86,8 +84,9 @@
   // ----- Mid
 
   .landing-mid {
-    padding: 5vh 0;
+    padding: 50px 0;
     position: relative;
+    max-width: 250px;
   }
 
   .landing-mid__section {
@@ -97,7 +96,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 10;
+    -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
     color: rgba($black, 0.8);
   }
@@ -109,69 +108,45 @@
   }
 
   .landing-mid__feature {
-    padding: 0 20px;
-    font-size: 16px;
+    padding: 20px 0;
+    font-size: 20px;
     min-width: 80px;
   }
 
-  // .landing-mid__feature-other {
-  //   font-size: 14px;
-  // }
-
   .landing-mid__overlay {
     position: absolute;
-    height: 100%;
     display: flex;
-    width: 30vw;
+    width: 100%;
+    height: 150px;
 
     &.top-- {
-      left: 0;
-      background: linear-gradient(90deg, $white, 60%, rgba($white, 0));
+      top: 0;
+      background: linear-gradient($white, 60%, rgba($white, 0));
     }
 
     &.bottom-- {
-      right: 0;
-      background: linear-gradient(90deg, rgba($white, 0), 40%, $white);
+      bottom: 0;
+      background: linear-gradient(rgba($white, 0), 40%, $white);
     }
   }
 
   @media (min-width: $bp-lg) {
     .landing-mid {
       padding: 0 6vw;
+      max-width: 300px;
     }
 
     .landing-mid__overlay {
-      width: 100%;
       height: 300px;
-
-      &.top-- {
-        top: 0;
-        background: linear-gradient($white, 60%, rgba($white, 0));
-      }
-
-      &.bottom-- {
-        bottom: 0;
-        background: linear-gradient(rgba($white, 0), 40%, $white);
-      }
     }
 
     .landing-mid__section {
       font-size: 18px;
+      -webkit-line-clamp: 10;
     }
 
     .landing-mid__feature {
-      padding: 20px 0;
       font-size: 24px;
-    }
-
-    // .landing-mid__feature-other {
-    //   font-size: 18px;
-    // }
-  }
-
-  @media (min-width: $bp-xl) {
-    .landing-mid {
-      padding: 0 12vw;
     }
   }
 
